@@ -10,7 +10,7 @@ import {UserService} from "../services/user.service";
 })
 export class UserDetailsComponent implements OnInit {
 
-  user: any;
+  user: IUser;
 
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
     this.activatedRoute.params.subscribe(({id}) => {
