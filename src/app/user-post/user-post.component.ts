@@ -9,8 +9,10 @@ import {IPost} from "../models/IPost";
 export class UserPostComponent implements OnInit {
 
   @Input()
-  post : IPost
-  constructor() { }
+  post: IPost
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable, Observer} from "rxjs";
+import {Observable} from "rxjs";
 import {IPost} from "../models/IPost";
 
 @Injectable({
@@ -14,7 +14,7 @@ export class PostService {
 
   }
 
-  getAllposts(): Observable<IPost[]>{
+  getAllposts(): Observable<IPost[]> {
     return this.httpClient.get<IPost[]>(this.url)
   }
 }

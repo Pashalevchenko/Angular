@@ -11,7 +11,8 @@ export class UserComponent implements OnInit {
 
   @Input()
   user: IUser
-  constructor( private router : Router, private activatedRoute: ActivatedRoute) {
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
 
   }
 
@@ -19,6 +20,6 @@ export class UserComponent implements OnInit {
   }
 
   toUserPosts(): void {
-    this.router.navigate([this.user.id + '/users-with-posts'] , {relativeTo: this.activatedRoute})
+    this.router.navigate([this.user.id + '/users-with-posts'], {relativeTo: this.activatedRoute})
   }
 }
