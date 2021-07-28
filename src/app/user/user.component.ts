@@ -19,6 +19,6 @@ export class UserComponent implements OnInit {
   }
 
   toUserPosts(): void {
-    this.router.navigate([this.user.id] , {relativeTo: this.activatedRoute})
+    this.router.navigate([this.user.id + '/users-with-posts'] , {relativeTo: this.activatedRoute})
   }
 }

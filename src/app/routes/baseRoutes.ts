@@ -5,7 +5,7 @@ import {Routes} from "@angular/router";
 
 export const routes: Routes = [
   {path: 'users', component: UsersComponent, children: [
-      {path: ':id', component: UserPostsComponent}
+      {path: ':id'+ '/users-with-posts', component: UserPostsComponent}
     ]},
   {path: 'posts', component: PostsComponent},
 ]
