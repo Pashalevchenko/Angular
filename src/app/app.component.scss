@@ -1,0 +1,10 @@
+ul{
+  display: flex;
+  column-gap: 20px;
+  li{
+    list-style: none;
+    a{
+      text-decoration: none;
+    }
+  }
+}

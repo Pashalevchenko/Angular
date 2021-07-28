@@ -1,16 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {IUser} from "../models/IUser";
 import {UserService} from "../services/user.service";
+import {IPost} from "../models/IPost";
 
 @Component({
   selector: 'app-user-details',
-  templateUrl: './user-details.component.html',
-  styleUrls: ['./user-details.component.scss']
+  templateUrl: './user-posts.component.html',
+  styleUrls: ['./user-posts.component.scss']
 })
-export class UserDetailsComponent implements OnInit {
+export class UserPostsComponent implements OnInit {
 
-  user: IUser;
+  user: IPost[];
 
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
     this.activatedRoute.params.subscribe(({id}) => {

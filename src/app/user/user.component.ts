@@ -18,7 +18,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toUserDetails(): void {
+  toUserPosts(): void {
     this.router.navigate([this.user.id] , {relativeTo: this.activatedRoute})
   }
 }
