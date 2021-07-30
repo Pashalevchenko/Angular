@@ -1,24 +1,20 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {IPost} from "../../models/IPost.";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Component, Input} from '@angular/core';
+import {Router} from "@angular/router";
+
+import {IPost} from "../../models";
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements OnInit {
-
+export class PostComponent {
   @Input()
-  post: IPost
+  post: IPost;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit(): void {
-  }
+  constructor(private router: Router) { }
 
   postDetails(): void {
-    this.router.navigate(['posts',this.post.id], {state: this.post})
-
+    this.router.navigate(['posts',this.post.id], {state: this.post});
   }
 }

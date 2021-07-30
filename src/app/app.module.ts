@@ -1,12 +1,10 @@
 import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from "@angular/router";
 import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
 
 import {AppComponent} from './app.component';
-import {RouterModule, Routes} from "@angular/router";
-import {HttpClientModule} from "@angular/common/http";
-import { PostsComponent } from './components/posts/posts.component';
-import { PostComponent } from './components/post/post.component';
-import { PostDetailsComponent } from './components/post-details/post-details.component';
+import {PostComponent, PostDetailsComponent, PostsComponent} from './components';
 
 
 let routes: Routes = [
@@ -20,8 +18,6 @@ let routes: Routes = [
     PostsComponent,
     PostComponent,
     PostDetailsComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -31,5 +27,4 @@ let routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
