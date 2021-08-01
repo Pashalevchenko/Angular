@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IUser} from "../models/IUser";
+import {IUser} from "../../models/IUser";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -12,6 +12,7 @@ export class UserComponent implements OnInit {
   @Input()
   user: IUser
 
+
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
 
   }
@@ -21,5 +22,9 @@ export class UserComponent implements OnInit {
 
   toUserPosts(): void {
     this.router.navigate([this.user.id + '/users-with-posts'], {relativeTo: this.activatedRoute})
+  }
+
+  userdetails(): void {
+    this.router.navigate(['users/userDetails'], {state: this.user})
   }
 }

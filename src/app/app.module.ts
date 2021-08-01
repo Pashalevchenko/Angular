@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {RouterModule} from "@angular/router";
-import { UsersComponent } from './users/users.component';
-import { PostsComponent } from './posts/posts.component';
+import { UsersComponent } from './components/users/users.component';
+import { PostsComponent } from './components/posts/posts.component';
 import {HttpClientModule} from "@angular/common/http";
 import {routes} from "./routes/baseRoutes";
-import { UserComponent } from './user/user.component';
-import { UserPostsComponent } from './user-posts/user-posts.component';
-import { PostComponent } from './post/post.component';
-import { UserPostComponent } from './user-post/user-post.component';
+import { UserComponent } from './components/user/user.component';
+import { UserPostsComponent } from './components/user-posts/user-posts.component';
+import { PostComponent } from './components/post/post.component';
+import { UserPostComponent } from './components/user-post/user-post.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 
 
@@ -22,7 +23,8 @@ import { UserPostComponent } from './user-post/user-post.component';
     UserComponent,
     UserPostsComponent,
     PostComponent,
-    UserPostComponent
+    UserPostComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
