@@ -12,7 +12,7 @@ export class UserDetailsComponent implements OnInit {
 
   user: IUser
   constructor(private router: Router) {
-    this.user = this.router.getCurrentNavigation()?.extras.state as IUser;
+    console.log(this.router.getCurrentNavigation()?.extras.state as IUser);
   }
 
   ngOnInit(): void {
