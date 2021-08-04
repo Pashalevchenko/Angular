@@ -1,9 +1,12 @@
-<form (ngSubmit)="onSubmit()">
-  <select name="Users" [(ngModel)]="users.id">
+<form  (ngSubmit)="onSubmit()" #f = 'ngForm'>
+  <select name="user" [(ngModel)]="selectUser">
 
-      <app-user [user]="user" *ngFor="let user of users"></app-user>
+    <option *ngFor="let user of users" [ngValue]="user" >{{user.name}}</option>
 
   </select>
   <button>Submit</button>
 </form>
+
+<router-outlet></router-outlet>
+
 

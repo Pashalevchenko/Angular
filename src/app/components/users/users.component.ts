@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -10,6 +10,7 @@ export class UsersComponent implements OnInit {
 
   users: any;
 
+  selectUser: any
   constructor(private activatedroute: ActivatedRoute, private router: Router) {
     this.activatedroute.data.subscribe(value => this.users = value.data)
   }
@@ -18,7 +19,8 @@ export class UsersComponent implements OnInit {
 
   }
 
-  onSubmit(): void {
 
+  onSubmit(): void {
+  this.router.navigate(['users/' + this.selectUser.id], {state: this.selectUser})
   }
 }

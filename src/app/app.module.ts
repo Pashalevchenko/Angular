@@ -21,7 +21,9 @@ import { UserComponent } from './components/user/user.component';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path:'users', component: UsersComponent, resolve: {data: UserResolveService}}
+      {path:'users', component: UsersComponent, resolve: {data: UserResolveService}, children:[
+          {path: ':id', component: UserComponent}
+        ]}
     ])
   ],
   providers: [],

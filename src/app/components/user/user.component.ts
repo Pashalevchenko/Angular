@@ -1,4 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-user',
@@ -7,11 +9,11 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  @Input()
+  // @Input()
   user: any
 
-  constructor() {
-
+  constructor(private router: Router) {
+    console.log(this.router.getCurrentNavigation()?.extras.state as any);
   }
 
   ngOnInit(): void {
