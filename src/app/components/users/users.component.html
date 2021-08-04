@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()">
+  <select name="Users" [(ngModel)]="users.id">
+    <option *ngFor="let user of users" value="{{user.id}}">
+      <app-user [user]="user">
+
+      </app-user>
+    </option>
+  </select>
+  <button>Submit</button>
+</form>
+
