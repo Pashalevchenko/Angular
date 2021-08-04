@@ -11,7 +11,7 @@ export class UserComponent implements OnInit {
   user: any
 
   constructor() {
-    
+
   }
 
   ngOnInit(): void {
