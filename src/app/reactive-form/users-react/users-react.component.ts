@@ -25,6 +25,5 @@ export class UsersReactComponent implements OnInit {
 
   save(): void {
     this.router.navigate(['users/reactComp/' + this.form.value.user.id], {state: this.form.value.user})
-    console.log(this.form.value.user.id)
   }
 }
