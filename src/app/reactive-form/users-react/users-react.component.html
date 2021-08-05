@@ -1,0 +1,7 @@
+<h2>Reactive form</h2>
+<form [formGroup]="form" (ngSubmit)="save()">
+  <select name="" id="" formControlName="user" >
+    <option *ngFor="let user of users" [ngValue]="user">{{user.name}}</option>
+  </select>
+  <button>Submit</button>
+</form>

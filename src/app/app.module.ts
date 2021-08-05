@@ -8,12 +8,16 @@ import {UsersComponent} from "./components/users/users.component";
 import {RouterModule} from "@angular/router";
 import {UserResolveService} from "./service/user-resolve.service";
 import { UserComponent } from './components/user/user.component';
+import { UsersReactComponent } from './reactive-form/users-react/users-react.component';
+import { UserReactComponent } from './reactive-form/user-react/user-react.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    UsersReactComponent,
+    UserReactComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,8 @@ import { UserComponent } from './components/user/user.component';
     HttpClientModule,
     RouterModule.forRoot([
       {path:'users', component: UsersComponent, resolve: {data: UserResolveService}, children:[
-          {path: ':id', component: UserComponent}
+          {path: ':id', component: UserComponent},
+          {path: 'reactComp/:id', component: UserReactComponent}
         ]}
     ])
   ],

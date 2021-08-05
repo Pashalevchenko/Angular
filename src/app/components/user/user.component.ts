@@ -9,7 +9,6 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class UserComponent implements OnInit {
 
-  // @Input()
   user: any
 
   constructor(private router: Router,  private acrivatedRoute: ActivatedRoute) {

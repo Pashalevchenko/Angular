@@ -1,11 +1,14 @@
-<form  (ngSubmit)="onSubmit()" #f = 'ngForm'>
+<h2>Template driven form</h2>
+<form (ngSubmit)="onSubmit()" #f = 'ngForm'>
   <select name="user" [(ngModel)]="selectUser">
 
-    <option *ngFor="let user of users" [ngValue]="user" >{{user.name}}</option>
+    <option *ngFor="let user of users" [ngValue]="user">{{user.name}}</option>
 
   </select>
   <button>Submit</button>
 </form>
+<hr>
+<app-users-react></app-users-react>
+
+<h2>Result</h2>
 <router-outlet></router-outlet>
-
-
