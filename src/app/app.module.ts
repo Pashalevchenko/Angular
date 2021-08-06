@@ -12,9 +12,7 @@ import {AppRoutingModule} from "./app-routing.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot([
-      {path: 'posts', loadChildren: () => import('./post/post.module').then(m => m.PostModule)}
-    ])
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
